@@ -4,9 +4,10 @@ module.exports = {
               return webElem.clear().sendKeys(value);
           },
 
-          login: function (loginValue, passwordValue ,loginElem, passwordElem) {
+          login: function (loginValue, passwordValue ,loginElem, passwordElem, submitBtn) {
             this.setElementValue(loginElem, loginValue);
-            return this.setElementValue(passwordElem, passwordValue);
+            this.setElementValue(passwordElem, passwordValue);
+            return submitBtn.click();
           }
       },
 
