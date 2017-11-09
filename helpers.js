@@ -1,12 +1,12 @@
 module.exports = {
       elementHelper : {
-          setElementValue : function (webElem, value) {
+          setElementValue : function (value, webElem) {
               return webElem.clear().sendKeys(value);
           },
 
           login: function (loginValue, passwordValue ,loginElem, passwordElem, submitBtn) {
-            this.setElementValue(loginElem, loginValue);
-            this.setElementValue(passwordElem, passwordValue);
+            this.setElementValue(loginValue, loginElem);
+            this.setElementValue(passwordValue, passwordElem);
             return submitBtn.click();
           }
       },
