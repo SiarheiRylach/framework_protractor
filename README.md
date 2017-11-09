@@ -1,4 +1,4 @@
-# framework_protractor
+# helpers_protractor
    Some methods-wrappers for protractor tests
   
 ***Getting Started***</br>
