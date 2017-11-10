@@ -8,7 +8,17 @@ module.exports = {
             this.setElementValue(loginValue, loginElem);
             this.setElementValue(passwordValue, passwordElem);
             return submitBtn.click();
-          }
+          },
+
+          setElementValueWithWait: function (value, webElem, timeout) {
+              browser.wait(EC.visibilityOf(webElem, timeout));
+              this.setElementValue(value, webElem);
+          },
+
+          clickWithWait: function (webElem, timeout) {
+              browser.wait(EC.visibilityOf(webElem, timeout));
+              webElem.sendButton.click();
+          },
       },
 
       browserHelper : {
