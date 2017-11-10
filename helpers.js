@@ -1,7 +1,7 @@
 module.exports = {
       elementHelper : {
           setElementValue : function (value, webElem) {
-              return webElem.clear().sendKeys(value);
+              return webElem.clear().sendKeys(value).sendKeys(protractor.Key.TAB);
           },
 
           login: function (loginValue, passwordValue ,loginElem, passwordElem, submitBtn) {
@@ -12,7 +12,7 @@ module.exports = {
 
           setElementValueWithWait: function (value, webElem, timeout) {
               browser.wait(EC.visibilityOf(webElem, timeout));
-              this.setElementValue(value, webElem);
+              return this.setElementValue(value, webElem);
           },
 
           clickWithWait: function (webElem, timeout) {
