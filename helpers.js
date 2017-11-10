@@ -17,7 +17,7 @@ module.exports = {
 
           clickWithWait: function (webElem, timeout) {
               browser.wait(EC.visibilityOf(webElem, timeout));
-              webElem.click();
+              return webElem.click();
           },
       },
 
